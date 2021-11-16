@@ -9,6 +9,7 @@ import {CoursesService} from "./courses.service";
         <li *ngFor="let course of courses">
           {{ course }}
         </li>
+        <button class="btn btn-primary">Save</button>
     </ul>`
 })
 
