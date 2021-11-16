@@ -3,12 +3,12 @@ import { Component} from "@angular/core";
 @Component({
   selector: 'courses',
   template: `
-    <input (keyup.enter)="onKeyUp()">
-
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   `
 })
 
 export class CoursesComponent {
+  email="me@example.com";
 
   onSave($event: MouseEvent){
     $event.stopPropagation();
@@ -20,7 +20,7 @@ export class CoursesComponent {
   }
 
   onKeyUp(){
-    console.log("Enter was pressed");
+    console.log(this.email);
   }
 
 }
