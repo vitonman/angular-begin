@@ -1,31 +1,24 @@
 import { Component} from "@angular/core";
-import {CoursesService} from "./courses.service";
 
 @Component({
   selector: 'courses',
   template: `
-    <h2>{{ "Title: " + getTitle() }}</h2>
-    <ul>
-        <li *ngFor="let course of courses">
-          {{ course }}
-        </li>
-        <button class="btn btn-primary">Save</button>
-    </ul>`
+    <div (click)="onDivClicked()">
+     <button (click)="onSave($event)">Save</button>
+    </div>
+
+  `
 })
 
 export class CoursesComponent {
 
-  title = "List of courses";
-  courses;
-
-  constructor(service: CoursesService) {
-    this.courses = service.getCourses();
+  onSave($event: MouseEvent){
+    $event.stopPropagation();
+    console.log("Button was clicked", $event);
   }
-  // Logic for calling an HTTP service
 
-
-  getTitle() {
-    return this.title;
+  onDivClicked(){
+      console.log("Div was clicked");
   }
 
 }
