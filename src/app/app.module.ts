@@ -9,13 +9,15 @@ import { CourseComponent } from './course/course.component';
 import {CoursesService} from "./courses.service";
 import { AuthorComponent } from './author/author.component';
 import {AuthorService} from "./author.service";
+import { TestfolderComponent } from './testfolder/testfolder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    AuthorComponent
+    AuthorComponent,
+    TestfolderComponent
   ],
   imports: [
     BrowserModule,
