@@ -9,7 +9,11 @@ import { CourseComponent } from './course/course.component';
 import {CoursesService} from "./courses.service";
 import { AuthorComponent } from './author/author.component';
 import {AuthorService} from "./author.service";
-import { TestfolderComponent } from './testfolder/testfolder.component';
+import {SummaryPipe} from "./summary.pipe";
+import { IconComponent } from './icon/icon.component';
+import { TemplatebarComponent } from './templatebar/templatebar.component';
+import { TitleCasePipe } from './title-case.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { TestfolderComponent } from './testfolder/testfolder.component';
     CoursesComponent,
     CourseComponent,
     AuthorComponent,
-    TestfolderComponent
+    SummaryPipe,
+    IconComponent,
+    TemplatebarComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,

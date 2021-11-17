@@ -1,26 +1,20 @@
 import { Component} from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
+
+
 
 @Component({
   selector: 'courses',
   template: `
-    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+    {{ text | summary }}
   `
 })
 
 export class CoursesComponent {
-  email="me@example.com";
 
-  onSave($event: MouseEvent){
-    $event.stopPropagation();
-    console.log("Button was clicked", $event);
-  }
+  text = `
+    Lorem Ipsum is simply dummy text of printing bla laa ala
 
-  onDivClicked(){
-      console.log("Div was clicked");
-  }
-
-  onKeyUp(){
-    console.log(this.email);
-  }
+  `
 
 }
