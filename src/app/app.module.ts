@@ -13,6 +13,8 @@ import {SummaryPipe} from "./summary.pipe";
 import { IconComponent } from './icon/icon.component';
 import { TemplatebarComponent } from './templatebar/templatebar.component';
 import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikemeterComponent } from './likemeter/likemeter.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { TitleCasePipe } from './title-case.pipe';
     SummaryPipe,
     IconComponent,
     TemplatebarComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent,
+    LikemeterComponent
   ],
   imports: [
     BrowserModule,

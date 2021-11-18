@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular application';
+  tweet = {
+    body: 'Here is the body',
+    likeCount: 10,
+    isLiked: true
+  }
+
+  onLikeChanged(eventArgs: { tweet: boolean }){
+    console.log("changed: ", eventArgs);
+  }
+
 }
